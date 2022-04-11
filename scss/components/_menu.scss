@@ -1,0 +1,240 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 40%;
+}
+
+.menu-button {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 501;
+}
+
+.menu__image {
+    max-width: 100%;
+    visibility: visible;
+}
+
+.menu__image.active {
+    visibility: hidden;
+}
+
+.menu-button__line {
+    width: 100%;
+    height: 1px;
+    position: relative;
+}
+
+.menu-button__line.active::before {
+    content: '';
+    width: 35px;
+    height: 2px;
+    background-color: $col_elem;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20px;
+    left: 10px;
+}
+
+.menu-button__line.active::after {
+    content: '';
+    width: 35px;
+    height: 2px;
+    background-color: $col_elem;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: -20px;
+    left: 10px;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: $col_back;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 500;
+    transition: all 1s;
+    background-image: url(../../images/3-girl.png), url(../../images/4-girl.png);
+    background-repeat: no-repeat;
+    background-position: 12% 95%, 90% 90%;
+}
+
+.burger-menu.active {
+    right: 0;
+}
+
+.menu__list {
+    margin-top: 50%;
+    width: 100%;
+    height: 80%;
+    padding-left: 0;
+    position: relative;
+}
+
+.burger-menu__decor {
+    width: 80%;
+    height: 2px;
+    background-color: $col_elem;
+    position: absolute;
+    bottom: 12px;
+    left: 46px;
+}
+
+.menu__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    min-height: 15%;
+    height: fit-content;
+}
+
+.menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    @include text($ff_titles, normal, normal, 120%, none, white);
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.menu__link:hover {
+    color: $col_elem;
+}
+
+
+@media (min-width: 550px) and (max-width: 749px) {
+    .menu-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu__image {
+        width: 45px;
+    }
+
+    .menu__list {
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .menu {
+        width: 70%;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .burger-menu {
+        position: relative;
+        top:0;
+        left: 0;
+        background-image: none;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 96%;
+        height: fit-content;
+        margin-top: 3%;
+        margin-bottom: 0;
+        margin-right: 60px;
+    }
+
+    .burger-menu__decor {
+        display: none;
+    }
+
+    .menu__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        width: fit-content;
+        min-height: 15%;
+        height: fit-content;
+    }
+
+    .menu__link {
+        color: $col_elem;
+        font-size: 16px;
+        padding-right: 0;
+    }
+
+    .menu__link:hover {
+        border-bottom: 2px solid white;
+    }
+
+}
+
+@media (min-width: 1001px) {
+    .menu {
+        width: 70%;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .burger-menu {
+        position: relative;
+        top:0;
+        left: 0;
+        background-image: none;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 96%;
+        height: fit-content;
+        margin-top: 4%;
+        margin-bottom: 0;
+        margin-right: 60px;
+    }
+
+    .burger-menu__decor {
+        display: none;
+    }
+
+    .menu__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        width: fit-content;
+        min-height: 15%;
+        height: fit-content;
+    }
+
+    .menu__link {
+        color: $col_elem;
+        font-size: 22px;
+        padding-right: 0;
+    }
+
+    .menu__link:hover {
+        border-bottom: 2px solid white;
+    }
+
+}

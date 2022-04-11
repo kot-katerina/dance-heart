@@ -1,0 +1,144 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 16%;
+    position: relative;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 5%;
+    z-index: 501;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    border-bottom: 1px solid $col_elem;
+}
+
+.logo__image {
+    width: 55px;
+    height: 55px;
+    transform: translateY(6px);
+}
+
+.logo__text {
+    @include text($ff_logo, normal, normal, 100%, none, white);
+    font-size: 1.1em;
+    padding-right: 5px;
+    margin: 0;
+    transform: translateY(17px);
+}
+
+.header__text {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include text($ff_titles, normal, normal, 120%, none, white);
+    font-size: 16px;
+    margin: auto 0;
+}
+
+@media (min-width: 550px) and (max-width: 749px) {
+    .header {
+        height: 15%;
+    }
+    
+    .header__info {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .header__text {
+        margin-left: 22px;
+        font-size: 22px;
+        line-height: 100%;
+        white-space: nowrap;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        height: fit-content;
+        border-bottom: 1px solid $col_elem;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .header {
+        height: 21%;
+    }
+
+    .header__info {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0px;
+        width: 22%;
+    }
+
+    .header__text {
+        font-size: 26px;
+        line-height: 100%;
+        position: absolute;
+        right: 5%;
+        bottom: 13%;
+    }
+
+    .logo__image {
+        width: 70px;
+        height: 70px;
+        transform: translateY(9px);
+    }
+    
+    .logo__text {
+        @include text($ff_logo, normal, normal, 100%, none, white);
+        font-size: 1.1em;
+        padding-right: 5px;
+        margin: 0;
+        transform: translate(-8px, 33px);
+    }
+}
+
+@media (min-width: 1001px) {
+    .header {
+        height: 25%;
+    }
+
+    .header__info {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0px;
+        width: 26%;
+    }
+
+    .header__text {
+        font-size: 36px;
+        line-height: 100%;
+        position: absolute;
+        right: 5%;
+        bottom: 24%;
+    }
+
+    .logo__image {
+        width: 137px;
+        height: 137px;
+        transform: translateY(17px);
+    }
+    
+    .logo__text {
+        @include text($ff_logo, normal, normal, 100%, none, white);
+        font-size: 2em;
+        padding-right: 5px;
+        margin: 0;
+        transform: translate(-17px, 67px);
+    }
+}

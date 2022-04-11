@@ -1,0 +1,128 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $col_elem;
+    background-image: url(../../images/bg-feedback.png);
+    background-size: 161px 300px;
+    background-repeat: no-repeat;
+    background-position: 97% 84%;
+}
+
+.feedback__title {
+    @include text($ff_titles, normal, normal, 120%, none, $col_back);
+    font-size: calc(1.1em + 1vw);
+    text-align: center;
+}
+
+.feedback__cover {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto;
+    
+}
+
+.feedback-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.feedback__text {
+    width: 90%;
+    margin: 20px auto;
+    @include text($ff_text, normal, normal, 120%, none, $col_back);
+    font-size: calc(0.7em + 1vw);
+    text-align: center;
+}
+
+.decor__image_top {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:10%;
+    left: -3%;
+}
+
+.decor__image_bottom {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom:8%;
+    right: -3%;
+}
+
+@media (min-width: 550px) and (max-width: 749px) {
+    .feedback__cover {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 10px auto;
+    }
+
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .feedback__cover {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 30px;
+        margin-left: 50px;
+    }
+
+    .feedback__text {
+        width: 90%;
+        margin: 20px auto;
+        @include text($ff_text, normal, normal, 120%, none, $col_back);
+        font-size: calc(0.7em + 1vw);
+        text-align: left;
+        position: relative;
+    }
+
+    .decor__image_top {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 36%;
+        left: -6%;
+    }
+
+    .decor__image_bottom {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1001px) {
+    .feedback__cover {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 30px;
+        margin-left: 50px;
+    }
+
+    .feedback__text {
+        width: 90%;
+        margin: 20px auto;
+        @include text($ff_text, normal, normal, 120%, none, $col_back);
+        font-size: 20px;
+        text-align: left;
+        position: relative;
+    }
+
+    .decor__image_top {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 36%;
+        left: -4%;
+    }
+
+    .decor__image_bottom {
+        display: none;
+    }
+}

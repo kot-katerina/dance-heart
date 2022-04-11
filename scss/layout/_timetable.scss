@@ -1,0 +1,236 @@
+.tabletime {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tabletime__cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-image: url(../../images/elem.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+}
+
+.tabletime__title {
+    text-align: center;
+    @include text($ff_titles, normal, normal, 120%, none, $col_back);
+    font-size: calc(1.1em + 1vw);
+    margin-top: 2%;
+}
+
+.tabletime__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tabletime-card__cover {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tabletime-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabletime-card__title {
+    @include text($ff_titles, normal, normal, 120%, none, white);
+    font-size: calc(1em + 1vw);
+    text-align: left;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.tabletime-card__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.tabletime-card__text {
+    @include text($ff_text, normal, normal, 120%, none, white);
+    font-size: calc(0.7em + 1vw);
+    text-align: left;
+}
+
+.tabletime-card__text_left {
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+.tabletime-card__text_right {
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.timetable__link {
+    display: none;
+}
+
+@media (min-width: 550px) and (max-width: 749px) {
+    .tabletime__title {
+        font-size: calc(1.5em + 1vw);
+        margin-top: 4%;
+    }
+
+    .tabletime__cover {
+        height: 30vh;
+    }
+
+    .tabletime-card__cover {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .tabletime__title {
+        font-size: calc(2em + 1vw);
+        margin-top: 4%;
+    }
+
+    .tabletime__cover {
+        height: 35vh;
+    }
+
+    .tabletime__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .tabletime-card__cover {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        border: 1px solid $col_elem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .tabletime-card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .tabletime-card__title {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .tabletime-card__info {
+        flex-direction: column;
+    }
+
+    .tabletime-card__text {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .tabletime-card__text_left {
+        margin-left: 0;
+    }
+    
+    .tabletime-card__text_right {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1001px) {
+    .tabletime__title {
+        font-size: calc(2em + 1vw);
+        margin-top: 4%;
+    }
+
+    .tabletime__cover {
+        height: 35vh;
+    }
+
+    .tabletime__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .tabletime-card__cover {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        border: 1px solid $col_elem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .tabletime-card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .tabletime-card__title {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .tabletime-card__info {
+        flex-direction: column;
+    }
+
+    .tabletime-card__text {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .tabletime-card__text_left {
+        margin-left: 0;
+    }
+    
+    .tabletime-card__text_right {
+        margin-right: 0;
+    }
+
+    .four {
+        display: none;
+    }
+
+    .four.active {
+        display: flex;
+    }
+
+    .timetable__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 347px;
+        height: 80px;
+        background-color: $col_elem;
+        border-radius: 18px;
+        @include text($ff_titles, normal, normal, 120%, none, $col_back);
+        font-size: 20px;
+        margin: 20px auto;
+        text-decoration: none;
+        border: none;
+    }
+
+
+}

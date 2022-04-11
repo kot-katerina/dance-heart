@@ -1,0 +1,122 @@
+.direction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.direction-card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto;
+    border: 1px solid $col_elem;
+}
+
+.direction-card__image {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.direction-card__decor {
+    width: 40%;
+    height: 4px;
+    margin: 5px auto;
+    background-color: $col_elem;
+}
+
+p.direction-card__link {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.direction-card__link {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include text($ff_titles, normal, normal, 120%, none, white);
+    font-size: calc(1em + 1vw);
+    width: 100%;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+
+
+@media (min-width: 550px) and (max-width: 749px) {
+    .direction-card__image {
+        width: 70%;
+        margin: 15px auto;
+    }
+
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+    .direction {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .direction-card {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin: 20px auto;
+        border: 1px solid $col_elem;
+    }
+
+}
+
+@media (min-width: 1001px) {
+    .direction {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 80%;
+        max-width: 892px;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    .direction-card {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        height: calc((100vh - 25px*4)/2);
+        margin: 25px auto;
+        border: 1px solid $col_elem;
+    }
+
+    .direction-card__image {
+        height: calc(((100vh - 25px*4)/2)-32px-30px);
+    }
+
+    .direction-card__decor {
+        width: 40%;
+        height: 1px;
+        margin: 2px auto;
+        background-color: $col_elem;
+    }
+
+    p.direction-card__link {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    .direction-card__link {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include text($ff_titles, normal, normal, 120%, none, white);
+        font-size: calc(0.8em + 0.5vw);
+        width: 100%;
+        text-decoration: none;
+    }
+}
